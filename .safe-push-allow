@@ -1,0 +1,23 @@
+# Exceptions to the secret scan in tools/safe-push.sh.
+# One substring per line. A diff line containing any of them is exempt.
+#
+# Every entry needs a reason. An exception without one is indistinguishable
+# from a mistake, and the whole point of listing them here rather than
+# loosening the rule is that someone can audit this file.
+
+# ── Solana transaction signatures ────────────────────────────────────────────
+# A signature is 64 bytes in base58 — 87 to 88 characters. An ed25519 secret
+# key is 64 bytes in base58 — 87 to 88 characters. They are the same shape and
+# no regex separates them.
+#
+# This register exists to publish transaction signatures, so the rule fires on
+# exactly the content the repository is for. Listing each signature keeps the
+# base58 rule at full strength for everything else, which is what matters: a
+# signature published by mistake costs nothing, a key published by mistake is
+# the incident this repository documents.
+#
+# Verify before adding: a signature resolves on an explorer and is already
+# public on chain. If it does not resolve, it is not a signature.
+
+# tx of 2026-08-14 — repoint $ATTEST metadata URI + revoke mint authority (SOC-263)
+2VcaZ8JoMi86Dt1yZfni3MfuuyPqc4Q2GmLVNw2G9g9mhg44EC3Yfa8HGy2XN6VtzpbbZDkP3mZo9c4SLqZpgm2M
