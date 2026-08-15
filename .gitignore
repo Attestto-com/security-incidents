@@ -1,0 +1,24 @@
+node_modules/
+package-lock.json
+.DS_Store
+
+# --- secret hygiene ---
+# This repository exists because a private key was committed to a public repo.
+.env
+.env.*
+!.env.example
+.dev.vars
+*.key
+*.pem
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.p8
+*keypair*.json
+id.json
+.npmrc
+
+# --- solana-keygen grind output ---
+# `solana-keygen grind` writes hits as <pubkey>.json holding the secret key.
+??????????????????????????????????????????*.json

@@ -1,0 +1,24 @@
+{
+  "name": "Attestto Governance Token",
+  "symbol": "ATTEST",
+  "description": "DISCONTINUED — DO NOT TRADE. This SPL token was minted on 2026-07-24. The issuing private key was published to a public GitHub repository on 2026-07-25 and exploited by an automated scraper 4 minutes and 53 seconds later. The entire supply of 1,000,000 units was swept to an attacker-controlled wallet on the same day and can never be recovered: the freeze authority was already null at the time of the compromise and, under the SPL Token program, an authority set to null can never be re-established. Mint and metadata authorities were recovered to a secure wallet on 2026-08-14, and the mint authority was then permanently revoked so that no further supply can ever be created. This token has no treasury, no market, no distribution and no governance function. It is retained solely as a public record of the incident. Any offer to buy, sell or exchange it should be treated as fraudulent.",
+  "image": "https://avatars.githubusercontent.com/u/108633374?s=200&v=4",
+  "external_url": "https://github.com/Attestto-com/security-incidents",
+  "attributes": [
+    { "trait_type": "Status", "value": "Discontinued" },
+    { "trait_type": "Compromised", "value": "2026-07-25" },
+    { "trait_type": "Supply", "value": "1000000 (held by attacker, unrecoverable)" },
+    { "trait_type": "Mint authority", "value": "Revoked 2026-08-14" },
+    { "trait_type": "Freeze authority", "value": "null (cannot be restored)" },
+    { "trait_type": "Incident report", "value": "github.com/Attestto-com/security-incidents" }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "https://avatars.githubusercontent.com/u/108633374?s=200&v=4",
+        "type": "image/png"
+      }
+    ],
+    "category": "image"
+  }
+}
